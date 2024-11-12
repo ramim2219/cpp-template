@@ -35,6 +35,13 @@ vector<pair<K, V>> sort_map_by_key(const map<K, V>& m) {
     return v;
 }
 
+void sort_map_by_value_desc(const map<ll, ll>& m, vector<pair<ll, ll>>& sorted) {
+    sorted.assign(m.begin(), m.end());
+    sort(sorted.begin(), sorted.end(), [](const pair<ll, ll>& a, const pair<ll, ll>& b) {
+        return a.second > b.second;
+    });
+}
+
 template <typename K, typename V>
 vector<pair<K, V>> sort_map_by_value(const map<K, V>& m) {
     vector<pair<K, V>> v(all(m));
