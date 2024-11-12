@@ -140,7 +140,12 @@ void traversal_example() {
 // Example of usage in main function
 int main() {
     fast_io;
-    
+    //sort vector accending;
+    sort(cnt.begin(), cnt.end());
+    //sort vector deccending;
+    sort(v.begin(), v.end(), greater<int>());
+
+
     cout << "Sorting Examples:\n";
     vi vec = {4, 2, 5, 1};
     sort_vector(vec);
