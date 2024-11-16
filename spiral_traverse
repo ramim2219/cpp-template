@@ -1,0 +1,32 @@
+int spiral_traverse(vector<vector<char>>xx , int r , int c)
+{
+    int top, left , right , bottom;
+    top = 0;
+    left = 0;
+    bottom = r-1;
+    right = c-1;
+    while(top<=bottom && left<=right)
+    {
+        vector<char>yy;
+        string pp="";
+        int j=0;
+        for(int i=left; i<=right ; i++)
+            yy.push_back(xx[top][i]);
+        top++;
+        for(int i=top; i<=bottom ; i++)
+            yy.push_back(xx[i][right]);
+        right--;
+        if(top<=bottom)
+        {
+            for(int i=right;i>=left;i--)
+                yy.push_back(xx[bottom][i]);
+            bottom--;
+        }
+        if(left<=right)
+        {
+            for(int i=bottom;i>=top;i--)
+                yy.push_back(xx[i][left]);
+            left++;
+        }
+    }
+}
