@@ -1,0 +1,4 @@
+ll countBits(ll n) {
+    if (n == 0) return 1;
+    return std::floor(std::log2(n)) + 1;
+}
